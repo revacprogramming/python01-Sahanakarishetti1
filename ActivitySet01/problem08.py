@@ -1,4 +1,20 @@
 # Files
-Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in alphabetical order.
+fname = input("Enter file name: ")
+fh = open(fname)
+count=0
+total=0
+for line in fh:
+    if   line.startswith("X-DSPAM-Confidence:"):
+         
+    
+         t=line.find("0")
+         num=float(line[t:])
+     
+    
+        
+         count=count+1
+         total=total+num
+    
+average=total/count
 
-filename = "datas
+print("Average spam confidence:" ,average)
